@@ -1,0 +1,12 @@
+[package]
+name = "enum_error_example"
+version.workspace = true
+edition.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { workspace = true }
+sea-orm = { workspace = true }
+entity = { path = "../entity" }
+migration = { path = "../migration" }

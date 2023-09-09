@@ -1,0 +1,20 @@
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+resolver = "2"
+
+members = ["app", "entity", "migration"]
+default-members = ["app"]
+
+[workspace.dependencies]
+tokio = { version = "1.32", features = ["full"] }
+
+sea-orm = { version = "0.12.2", features = [
+    "sqlx-sqlite",
+    "runtime-tokio-rustls",
+    "macros",
+] }
+
+sea-orm-migration = { version = "0.12.2" }
