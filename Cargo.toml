@@ -9,12 +9,12 @@ members = ["app", "entity", "migration"]
 default-members = ["app"]
 
 [workspace.dependencies]
-tokio = { version = "1.32", features = ["full"] }
+tokio = { version = "1", features = ["full"] }
 
-sea-orm = { version = "0.12.2", features = [
+sea-orm = { version = "0.12.15", features = [
     "sqlx-sqlite",
     "runtime-tokio-rustls",
     "macros",
 ] }
 
-sea-orm-migration = { version = "0.12.2" }
+sea-orm-migration = { version = "0.12.15" }
