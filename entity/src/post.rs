@@ -3,19 +3,22 @@
 use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, PartialEq, Eq, EnumIter, DeriveActiveEnum)]
-#[sea_orm(rs_type = "String", db_type = "String(None)", enum_name = "status")]
+#[sea_orm(rs_type = "String", db_type = "Enum", enum_name = "status")]
 pub enum Status {
-    // #[sea_orm(string_value = "Open")]
-    // #[sea_orm(string_value = "열려 있는")]
-
-    // The following situations
-    // proc-macro derive panicked message: `""` is not a valid identifier
-    #[sea_orm(string_value = "打开")]
-    // #[sea_orm(string_value = "開ける")]
-    // #[sea_orm(string_value = "Нээлттэй")]
-    // #[sea_orm(string_value = "Открыть")]
-    // #[sea_orm(string_value = "يفتح")]
+    #[sea_orm(string_value = "Open")]
     Open,
+    #[sea_orm(string_value = "열려_있는")]
+    열려있는,
+    #[sea_orm(string_value = "打开")]
+    打开,
+    #[sea_orm(string_value = "開ける")]
+    開ける,
+    #[sea_orm(string_value = "Нээлттэй")]
+    Нээлттэй,
+    #[sea_orm(string_value = "Открыть")]
+    Открыть,
+    #[sea_orm(string_value = "يفتح")]
+    يفتح,
     #[sea_orm(string_value = "Close")]
     Close,
 }
